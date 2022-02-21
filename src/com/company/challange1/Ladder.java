@@ -13,10 +13,10 @@ public class Ladder {
         int n = 6;
 
         for (int i = 1; i <= n; i++) {
-            int espaces = n - i;
-            String asteriscs = "*";
-            String espace = " ";
-            System.out.println(espace.repeat(espaces) + asteriscs.repeat(i));
+            int spaces = n - i;
+            String asterisks = "*";
+            String space = " ";
+            System.out.println(space.repeat(spaces) + asterisks.repeat(i));
         }
 
     }
