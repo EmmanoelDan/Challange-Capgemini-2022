@@ -2,6 +2,9 @@ package com.company.challange2;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Validation Password
+ * */
 public class PasswordValidation {
     private Pattern pattern;
     private Matcher matcher;
@@ -14,10 +17,9 @@ public class PasswordValidation {
     }
 
     /**
-     * Validate password with regular expression
-     *
-     * @param password for validation
-     * @return true valid password, false invalid password
+     * We use regular expressions to validate our password!
+     * -> @param password for validation
+     * -> @return true valid password, false invalid password
      */
     public boolean validate(final String password) {
         matcher = pattern.matcher(password);

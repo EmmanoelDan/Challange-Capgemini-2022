@@ -1,40 +1,45 @@
 package com.company.challange2;
 
+/**
+ * Question 2
+ * Deborah signed up for a social network to keep in touch with her friends.
+ * The registration page required the completion of the name and password fields,
+ * but the password needs to be strong. The site considers a strong password when
+ * it meets the following criteria:
+ *    -> It has at least 6 characters.
+ *    -> Contains at least 1 digit.
+ *    -> Contains at least 1 letter in lowercase.
+ *    -> Contains at least 1 letter in capital letters.
+ *    -> Contains at least 1 special character. Special characters are: !@#$%^&*()-+
+ * */
+
 public class PasswordRegex {
     public static void main(String[] args) {
         PasswordValidation passwordValidator = new PasswordValidation();
 
-        System.out.println("'peter1AB@' is valid? = "+passwordValidator.validate("peter1AB@"));
-        System.out.println("'peter4COW$' is valid?  = "+passwordValidator.validate("peter4COW$"));
-        System.out.println("'peter78Dog%#' is valid?  = "+passwordValidator.validate("peter78Dog%#"));
+        System.out.println("'jhM7@' is valid? = "+passwordValidator.validate("jhM7@"));
+        System.out.println("'jhn7MCS&' is valid?  = "+passwordValidator.validate("jhn7MCS&"));
+        System.out.println("'carl77Mcs$&' is valid?  = "+passwordValidator.validate("carl77Mcs$&"));
 
         System.out.println("--------------------------------------------------");
 
-        /*
-         *  too short, minimum 6 characters
-         */
-        System.out.println("'p1AB@' is valid? = "+passwordValidator.validate("p1AB@"));
+        // Use case: It has at least 6 characters
 
-        /*
-         *  uppercase characters is required
-         */
-        System.out.println("'peter1@' is valid? = "+passwordValidator.validate("peter1@"));
+        System.out.println("'c7MC$' is valid? = "+passwordValidator.validate("c7MC$"));
+
+        // Use case: Contains at least 1 letter in capital letters
+        System.out.println("'jhon7$' is valid? = "+passwordValidator.validate("jhon7$"));
 
 
-        /*
-         *  special symbol “*” is not allow here
-         */
-        System.out.println("'peterAB2*' is valid? = "+passwordValidator.validate("peterAB2*"));
+        // Use case: Contains at least 1 special character. Special characters are: !@#$%^&*()-+
+        System.out.println("'emmanoelMC7*' is valid? = "+passwordValidator.validate("emmanoelMC7*"));
 
-        /*
-         *  digit is required
-         */
-        System.out.println("'peterAB$' is valid? = "+passwordValidator.validate("peterAB$"));
+        // Use case: Contains at least 1 digit
+
+        System.out.println("'emmanoelDD&' is valid? = "+passwordValidator.validate("emmanoelDD&"));
 
 
-        /*
-         *  lower case character is required
-         */
-        System.out.println("'PETER2$' is valid? = "+passwordValidator.validate("PETER2$"));
+        // Use Case: Contains at least 1 letter in lowercase
+        System.out.println("'MANEL7&' is valid? = "+passwordValidator.validate("MANEL7&"));
     }
 }
